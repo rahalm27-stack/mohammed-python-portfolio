@@ -7,15 +7,15 @@
 <body>
 <header><a class="logo" href="#top">MR<span>.</span></a><nav><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#future">Future</a><a href="mailto:vntmo27@gmail.com">Contact</a></nav></header>
 <main id="top">
-<section class="hero"><div><p class="eyebrow">AI & CLOUD DEVELOPMENT • PYTHON</p><h1>Mohammed<br><span>Rahal.</span></h1>
+<section class="hero"><div class="hero-content"><div class="hero-copy"><p class="eyebrow">AI & CLOUD DEVELOPMENT • PYTHON</p><h1>Mohammed<br><span>Rahal.</span></h1>
 <p class="lead">Senior in high school building skills in Python, AI, Docker, and cloud development. I'm early in my coding journey and ready to keep learning new languages and technologies.</p>
 <div class="buttons"><a class="primary" href="#work">View My Work</a><a class="secondary" href="mailto:vntmo27@gmail.com">Email Me</a></div>
-<div class="stats"><b>Python<small>Current focus</small></b><b>AI + Cloud<small>Study program</small></b><b>May 2027<small>Graduation</small></b></div></div></section>
+<div class="stats"><b>Python<small>Current focus</small></b><b>AI + Cloud<small>Study program</small></b><b>May 2027<small>Graduation</small></b></div></div><div class="hero-photo"><img src="{{ url_for('static', filename='images/programming.jpg') }}" alt="Mohammed Rahal programming at a computer"></div></div></section>
 <section id="about"><p class="eyebrow">01 / ABOUT ME</p><h2>Learning, building,<br>and improving.</h2><div class="about">
 <article><p>I am a senior in high school studying <strong>AI & Cloud Development</strong>, with graduation planned for May 2027. I am building my Python skills through CodeHS and class projects.</p>
 <p>I have learned variables, functions, input, data types, operators, conditions, loops, lists, debugging, and other Python basics. I am also studying for the <strong>PCEP</strong> certification exam.</p>
 <p>Outside of coding, I have been a four-year varsity wrestler at Hilliard Darby. Wrestling has taught me discipline, hard work, commitment, and focus.</p></article>
-<article class="facts"><p><small>LANGUAGES</small><b>English + Arabic</b></p><p><small>PROGRAM</small><b>AI & Cloud Development</b></p><p><small>CURRENT FOCUS</small><b>Python + PCEP</b></p><p><small>NEXT GOALS</small><b>JavaScript + more languages</b></p></article></div></section>
+<article class="facts"><p><small>LANGUAGES</small><b>English + Arabic</b></p><p><small>PROGRAM</small><b>AI & Cloud Development</b></p><p><small>CURRENT FOCUS</small><b>Python + PCEP</b></p><p><small>NEXT GOALS</small><b>JavaScript + more languages</b></p></article></div><div class="wrestling-gallery"><div><img src="{{ url_for('static', filename='images/wrestling-1.jpg') }}" alt="Mohammed Rahal wrestling"></div><div><img src="{{ url_for('static', filename='images/wrestling-2.jpg') }}" alt="Mohammed Rahal competing in wrestling"></div></div></section>
 <section class="dark" id="work"><p class="eyebrow">02 / MY WORK</p><h2>Projects from<br>my coding journey.</h2><p class="muted">Python, CodeHS, AI, Docker, and problem-solving work.</p><div class="grid">
 {% for title,tag,desc,skills2 in projects %}<article class="card"><small>{{ "%02d"|format(loop.index) }}</small><p class="tag">{{tag}}</p><h3>{{title}}</h3><p>{{desc}}</p><div>{% for s in skills2 %}<span>{{s}}</span>{% endfor %}</div></article>{% endfor %}</div></section>
 <section id="skills"><p class="eyebrow">03 / SKILLS</p><h2>What I'm working<br>with right now.</h2><div class="skills">{% for s in skills %}<span>{{s}}</span>{% endfor %}</div></section>

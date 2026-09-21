@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mohammed Rahal | Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header><a class="logo" href="#top">MR<span>.</span></a><nav><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#future">Future</a><a href="mailto:vntmo27@gmail.com">Contact</a></nav></header>
+<main id="top">
+<section class="hero"><div><p class="eyebrow">AI & CLOUD DEVELOPMENT • PYTHON</p><h1>Mohammed<br><span>Rahal.</span></h1>
+<p class="lead">Senior in high school building skills in Python, AI, Docker, and cloud development. I'm early in my coding journey and ready to keep learning new languages and technologies.</p>
+<div class="buttons"><a class="primary" href="#work">View My Work</a><a class="secondary" href="mailto:vntmo27@gmail.com">Email Me</a></div>
+<div class="stats"><b>Python<small>Current focus</small></b><b>AI + Cloud<small>Study program</small></b><b>May 2027<small>Graduation</small></b></div></div></section>
+<section id="about"><p class="eyebrow">01 / ABOUT ME</p><h2>Learning, building,<br>and improving.</h2><div class="about">
+<article><p>I am a senior in high school studying <strong>AI & Cloud Development</strong>, with graduation planned for May 2027. I am building my Python skills through CodeHS and class projects.</p>
+<p>I have learned variables, functions, input, data types, operators, conditions, loops, lists, debugging, and other Python basics. I am also studying for the <strong>PCEP</strong> certification exam.</p>
+<p>Outside of coding, I have been a four-year varsity wrestler at Hilliard Darby. Wrestling has taught me discipline, hard work, commitment, and focus.</p></article>
+<article class="facts"><p><small>LANGUAGES</small><b>English + Arabic</b></p><p><small>PROGRAM</small><b>AI & Cloud Development</b></p><p><small>CURRENT FOCUS</small><b>Python + PCEP</b></p><p><small>NEXT GOALS</small><b>JavaScript + more languages</b></p></article></div></section>
+<section class="dark" id="work"><p class="eyebrow">02 / MY WORK</p><h2>Projects from<br>my coding journey.</h2><p class="muted">Python, CodeHS, AI, Docker, and problem-solving work.</p><div class="grid">
+{% for title,tag,desc,skills2 in projects %}<article class="card"><small>{{ "%02d"|format(loop.index) }}</small><p class="tag">{{tag}}</p><h3>{{title}}</h3><p>{{desc}}</p><div>{% for s in skills2 %}<span>{{s}}</span>{% endfor %}</div></article>{% endfor %}</div></section>
+<section id="skills"><p class="eyebrow">03 / SKILLS</p><h2>What I'm working<br>with right now.</h2><div class="skills">{% for s in skills %}<span>{{s}}</span>{% endfor %}</div></section>
+<section id="future"><div class="future"><div><p class="eyebrow">04 / WHAT'S NEXT</p><h2>I'm ready to<br>learn more.</h2></div><div><p>I am still early in my coding journey, and I want to keep growing. After Python, I am interested in learning <strong>JavaScript</strong> and other programming languages and technologies.</p><p>My goal is to keep building real projects, learn from mistakes, and become a stronger developer over time.</p><a class="link" href="mailto:vntmo27@gmail.com">Let's connect →</a></div></div></section>
+<section class="contact"><p class="eyebrow">GET IN TOUCH</p><h2>Let's talk about<br>coding & opportunities.</h2><a class="email" href="mailto:vntmo27@gmail.com">vntmo27@gmail.com</a></section>
+</main><footer><span>© 2026 Mohammed Rahal</span><span>Python • AI • Cloud Development</span></footer>
+</body></html>
